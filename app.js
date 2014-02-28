@@ -4,11 +4,12 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-	res.render('index.jade')
+	res.render('index.jade');
+	console.log('Connection');
 });
 
 app.get('/test', function(req, res) {
-	res.send('Success')
+	res.send('Success');
 });
 
 app.listen(8080);
